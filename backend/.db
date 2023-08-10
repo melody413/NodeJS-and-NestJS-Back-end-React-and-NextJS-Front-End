@@ -1,0 +1,21 @@
+Table user {
+  id integer [pk]
+  uuid varchar
+  name varchar
+  email varchar
+  password varchar
+  created_at DateTime
+  updated_at DateTime
+  deleted_at DateTime
+}
+
+Table post {
+  id integer [pk]
+  uuid varchar
+  user_id integer [ref: > user.id]
+  title varchar
+  content varchar
+  created_at DateTime
+  updated_at DateTime
+  deleted_at DateTime
+}
